@@ -10,10 +10,14 @@ public abstract class Piece{
 	protected Sprite icon;
 	protected boolean isWhite; //white = true, black = false
 	protected String name; //"pawn", "king", etc.
+	protected String color; //"white" or "black"
 	protected Vector2 coords; //(0,0) --> (7,7)
 
-	public Piece(String name, String texturePath){
+	public Piece(String name, String color){
 		this.name = name;
+		this.color = color;
+
+		String texturePath = "pieces/" + color + "/" + name + ".png";
 		this.texture = new Texture(texturePath);
 		this.icon = new Sprite(this.texture);
 	}

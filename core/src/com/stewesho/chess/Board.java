@@ -30,7 +30,7 @@ public class Board{
         for (int r = 0; r < 8; r++){
             for (int c = 0; c < 8; c++){
                 if(gameBoard[r][c] != null) //checks that the array element exists
-                    _batch.draw(gameBoard[r][c].getSprite(), 20 + (50*c), 20 + (50 * r), 32, 32);
+                    _batch.draw(gameBoard[r][c].getSprite(), 20 + (85 * c), 20 + (85 * r), 64, 64);
             }
         }
     }
@@ -40,30 +40,30 @@ public class Board{
          * White Pieces (bottom)
          */
         if (row == 1){
-            this.gameBoard[row][col] = new Pawn();
+            this.gameBoard[row][col] = new Pawn("white");
         } else if (row == 0){
             switch(col){
                 case 0:
                 case 7: //rooks
-                    this.gameBoard[row][col] = new Rook();
+                    this.gameBoard[row][col] = new Rook("white");
                     break;
 
                 case 1:
                 case 6: //knights
-                    this.gameBoard[row][col] = new Knight();
+                    this.gameBoard[row][col] = new Knight("white");
                     break;
 
                 case 2:
                 case 5: //bishops
-                    this.gameBoard[row][col] = new Bishop();
+                    this.gameBoard[row][col] = new Bishop("white");
                     break;
 
                 case 3: //Queen
-                    this.gameBoard[row][col] = new Queen();
+                    this.gameBoard[row][col] = new Queen("white");
                     break;
 
                 case 4: //king
-                    this.gameBoard[row][col] = new King();
+                    this.gameBoard[row][col] = new King("white");
                     break;
             }
         }
@@ -71,30 +71,30 @@ public class Board{
          * Black Pieces
          */
         else if (row == 6){
-            this.gameBoard[row][col] = new Pawn();
+            this.gameBoard[row][col] = new Pawn("black");
         } else if (row == 7){
             switch(col){
                 case 0:
                 case 7: //rooks
-                    this.gameBoard[row][col] = new Rook();
+                    this.gameBoard[row][col] = new Rook("black");
                     break;
 
                 case 1:
                 case 6: //knights
-                    this.gameBoard[row][col] = new Knight();
+                    this.gameBoard[row][col] = new Knight("black");
                     break;
 
                 case 2:
                 case 5: //bishops
-                    this.gameBoard[row][col] = new Bishop();
+                    this.gameBoard[row][col] = new Bishop("black");
                     break;
 
                 case 3: //Queen
-                    this.gameBoard[row][col] = new Queen();
+                    this.gameBoard[row][col] = new Queen("black");
                     break;
 
                 case 4: //king
-                    this.gameBoard[row][col] = new King();
+                    this.gameBoard[row][col] = new King("black");
                     break;
             }
         } else {
