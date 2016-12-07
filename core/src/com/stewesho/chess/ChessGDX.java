@@ -10,11 +10,12 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 public class ChessGDX extends ApplicationAdapter {
 	SpriteBatch batch;
 	private OrthographicCamera camera;
+	private Board board;
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		Board board = new Board();
+		board = new Board();
 	}
 
 	@Override
@@ -22,6 +23,7 @@ public class ChessGDX extends ApplicationAdapter {
 		Gdx.gl.glClearColor((float) 0.1, (float) 0.5, (float) 0.75, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
+		board.draw(batch);
 		batch.end();
 	}
 
