@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 
 public class ChessGDX extends ApplicationAdapter {
 	SpriteBatch batch;
-	private OrthographicCamera camera;
 	private Board board;
 
 	@Override
